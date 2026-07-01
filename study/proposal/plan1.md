@@ -1,99 +1,111 @@
-# 🤖 ACTION-ATLAS — Plan & Novelty (solo · inference-only)
+# 🤖 ACTION-ATLAS — Plan & Novelty (🇮🇳 India · DenseWorld · YouTube driving)
 
-## 🆕 Table 1 — Novelty audit (🔴 scooped · 🟡 differentiate · 🟢 defensible)
+## 🎯 Table 1 — The novelty wedge (lead with this)
 
-| 🆕 Novelty proposal | 📚 Papers covering similar work (venue) | 🔧 FIX to modify / maintain novelty |
-|---|---|---|
-| 🟢⭐ **THE wedge (1 sentence):** "First fair, capability-indexed, closed-loop comparison of all 4 families (VLA/LWM/WAM/WFM) on real-world dense scenes (**WalkIndia**), with a VLA-relative advantage score." | WorldArena (WM types only, no VLA) · World-in-World (visual WMs only) · RoboArena (policies only, CoRL'25) · COLOSSEUM (sim perturb, not real video) | Lead §1 with this exact sentence, written **against WorldArena/VLABench from day one**. |
-| 🟢🇮🇳 **WalkIndia data moat** — Indian dense-street dashcam **replay eval** | nuScenes / Waymo (AV, not embodied replay) · COLOSSEUM (sim) · JRDB (campus, not dense street) | **Un-scoopable** — nobody else has this video. Privacy-safe release = adoption engine. |
-| 🔴 **"Missing benchmark" framing** | WorldModelBench (CVPR'25) · EWMBench (arXiv'25) · WorldSimBench · EVA (ICML'25) | ❌ Delete the claim. Add Related Work; position as **complementary**, not first. |
-| 🔴 **Capability-centric benchmark** | VLABench (ICCV'25) · WorldArena (arXiv'26) · "Understanding World or Predicting Future?" (ACM CSUR'25) | Reframe: "first to map **capabilities → 4-family prediction spectrum** under one VLA-baselined metric." Cite all three. |
-| 🔴 **World Advantage Score (WAS)** | 🚨 WorldArena **EWMScore** (holistic index) · WorldEval · WMPO | Differentiate: WAS = **capability-resolved × VLA-baselined** (EWMScore is model-holistic). Bound it + weight $w_j$ sensitivity. |
-| 🔴 **"Prediction ≠ behavior"** burden of proof | WorldArena · World-in-World · EWMBench · WMPO | Concede principle is established → claim = **applying it across all 4 families at once**. |
-| 🟢 **4-family taxonomy** (VLA→LWM→WAM→WFM) | Surveys: ACM CSUR'25 · "World Model for Robot Learning" | ⬇️ Demote to "framing," not a contribution. Cite surveys. |
-| 🟡 **Absent Objects** domain | LIBERO-Mem · MIKASA-Robo · MemoryBench (arXiv'25) | ♻️ Reuse LIBERO-Mem. Novelty = cross-family WAS. |
-| 🟡 **Counterfactual Futures** domain | Dream2Fix (arXiv'26) · FailSafe→RoboFail (arXiv'25) | ♻️ Reuse RoboFail. Differentiate via counterfactual **selection (CSA)**. |
-| 🟡 **Temporal Coordination** domain | CALVIN · LIBERO-Long · VLABench (ICCV'25) | ♻️ Reuse CALVIN / LIBERO-Long. Novelty = **LHCR × WAS**. |
-| 🟡 **ION** domain (forecast other agents) | JRDB · Social-HM3D/MP3D · 🚨 NavThinker (WAM-for-social, arXiv'26) | ♻️ Reuse Social-HM3D / JRDB. Cite & differentiate NavThinker (you compare families; they propose 1 method). |
+| 🆕 Element | 💡 Content |
+|---|---|
+| ⭐ One-sentence claim | "First benchmark testing whether the **world-model advantage survives real-world, socially-dense Indian street driving** (curated from **YouTube dashcam/driving clips**), and whether **forecasting other agents** is the mechanism — across all four prediction families (VLA/LWM/WAM/WFM) with a VLA-baselined advantage score (WAS)." |
+| 🧱 Un-scoopable asset | Dense Indian-street driving video (YouTube): rickshaws, mixed traffic, street vendors, pedestrians, animals, night/rain — **no rival benchmark has this data** |
+| 🕳️ Gap it fills | Every competitor is **simulation-only + single-agent**; none test **real-world + social/multi-agent + sim→real transfer** |
+| 🎯 Positioning | Complementary to World-in-World (the *sim* half) → ACTION-ATLAS is the **real-world social** half |
 
 ---
 
-## 🚦 Table 2 — Tier-1 readiness
+## 🆕 Table 2 — Novelty audit (🔴 scooped · 🟡 differentiate · 🟢 defensible)
 
-| 🧪 Dimension | 🚦 Status | 🗒️ Action |
+| 🆕 Claim | 📚 Prior work (venue) | 🔧 FIX / verdict |
 |---|---|---|
-| Novelty | 🟢 wedge + 🇮🇳 moat | Lead with WalkIndia + 4-family fair comparison |
-| Experiments | 🟢 cheap, solo | **Frozen-inference replay matrix** (no training, no sim, no robot) |
-| Related work | 🔴 0 benchmark refs | Cite WorldArena / VLABench / WorldModelBench / UniSim / iVideoGPT |
-| WAS soundness | 🟡 weak | Bound WAS · pin $m_{\text{VLA}}$=OpenVLA · 3 weight settings · bootstrap CIs · head ablation |
-| Target venue | 🎯 fit | NeurIPS D&B · CoRL · RSS |
+| 🔴 Closed-loop "behavior not fidelity" WM benchmark | **World-in-World (ICLR'26 Oral)** · WorldArena (arXiv'26) | ❌ Don't claim. Cite WiW as the sim half; you = real-world social half |
+| 🔴 **"Prediction ≠ behavior"** finding | World-in-World finding #1 · WorldModelBench (CVPR'25) | Concede it's established → your version = **on real Indian dense video** |
+| 🔴 **WAS** = world-model advantage metric | WorldArena **EWMScore** · WiW base→+WM deltas | Differentiate: **capability-resolved × VLA-baselined × real-world social** |
+| 🔴 "Missing / capability-centric benchmark" | VLABench (ICCV'25) · WorldArena | ❌ Delete "missing"; add Related Work; position complementary |
+| 🟢🇮🇳 **Real-world socially-dense Indian driving (YouTube)** | nuScenes/Waymo (AV, not WM-advantage eval) · all rivals sim | ⭐ **The moat** — un-scoopable data |
+| 🟢🚸 **Social / multi-agent (ION) as a capability axis** | WiW/WorldArena/VLABench all single-agent; NavThinker = 1 method, not a benchmark | ⭐ The differentiating capability |
+| 🟢🔁 **Sim→real transfer of the WM advantage** | World-in-World is sim-only | ⭐ Open scientific question |
+| 🟡 4-family taxonomy (VLA→LWM→WAM→WFM) | Embodied-WM surveys (ACM CSUR'25) | ⬇️ Demote to framing; cite surveys |
 
 ---
 
-## 🧩 Table 3 — Models (all frozen, inference-only)
+## 🇮🇳 Table 3 — DenseWorld-India data (YouTube driving clips)
 
-| 👪 Family | 🧊 Frozen open models (closed → proxy) | 🔌 Uniform adapter |
-|---|---|---|
-| 🦾 VLA | OpenVLA-7B · Octo · π0 · GR00T N1.7 (RT-2/Gemini → proxy) | native head — zero added |
-| 🧠 LWM | V-JEPA 2 (+ 2-AC) · I-JEPA | same tiny linear head **+ HSLA probe** |
-| 🎬 WAM | UVA · iVideoGPT | native rollout → action, frozen |
-| 🌍 WFM | Cosmos-Predict2.5 · Cosmos-Reason (critic) | frozen predictor/critic + tiny head |
+| 🎬 Aspect | 📋 Detail |
+|---|---|
+| Source | YouTube India dashcam / driving vlogs (Creative-Commons + fair-use research) |
+| Scenes | Crowded markets · mixed traffic · rickshaws/buses · street vendors · pedestrians · domestic animals |
+| Splits | normal · dense-market · night · rain · animal-crossing |
+| Unit | short clips → frames; ego-action derived from optical flow / steering proxy |
+| Eval mode | offline **replay / counterfactual action-agreement** + generative-sim closed-loop subset |
+| Labels | ego-action, other-agent tracks, crossing/stop intent, collision-risk flags |
+| Privacy | blur faces + license plates; release **URLs + timestamps + labels**, not raw video |
+| Release | pointer-only dataset + auto-download + blur pipeline |
 
 ---
 
-## 🗺️ Table 4 — Domains → offline replay set + headline metric
+## 🧩 Table 4 — Four model families (unified protocol) + WAS
 
-| 🎯 Domain | ♻️ Offline replay set (score frozen models, don't author) | 📐 Metric |
+| # | 👪 Family | 🔮 Predicts | 🧊 Frozen models | 🔌 Role / adapter |
+|---|---|---|---|---|
+| I | 🦾 **VLA policy** | observation + language → action | OpenVLA-7B · Octo · π0 · GR00T N1.7 | **baseline $m_{\text{VLA}}$**, native head (zero added) |
+| II | 🧠 **LWM (JEPA latent)** | predictive latent state | V-JEPA 2 (+2-AC) · I-JEPA | needs downstream policy head + HSLA probe |
+| III | 🎬 **WAM (world-action)** | future states + executable actions (jointly) | UVA · iVideoGPT | rollout → action (frozen) |
+| IV | 🌍 **WFM (world foundation)** | large-scale world simulation | Cosmos-Predict2.5 · Cosmos-Reason | simulator / planner / policy backbone + tiny head |
+| — | 📏 **WAS** | capability-level gain vs direct action prediction | $\dfrac{S(c,m)-S(c,m_{\text{VLA}})}{S(c,m_{\text{VLA}})+\epsilon}$ | statistically-significant advantage (bootstrap CIs) |
+
+---
+
+## 🗺️ Table 5 — Capability domains → data + headline metric
+
+| 🎯 Domain | ♻️ Data (reuse or 🇮🇳 India) | 📐 Metric |
 |---|---|---|
 | 👁️ Absent Objects | LIBERO-Mem · MIKASA-Robo | HSLA |
 | 🔮 Counterfactual Futures | RoboFail (FailSafe) · Dream2Fix | CSA · RSR |
 | ⏳ Temporal Coordination | CALVIN · LIBERO-Long | LHCR |
-| 🚸 ION (social) | JRDB · Social-HM3D/MP3D | SPR |
-| 🇮🇳 DenseWorld = **WalkIndia** | your dashcam replay (frame_t → predict → score vs frame_{t+1}) | $D_{\text{Dense}}$ · WAS |
-| ✅ Sanity | SimplerEnv replay | TSR · **WAS vs OpenVLA** |
+| 🚸 **ION (social)** ⭐ | 🇮🇳 India YouTube dense + JRDB · Social-HM3D | SPR · social-collision |
+| 🌪️ **DenseWorld-India** ⭐ | 🇮🇳 YouTube driving clips | $D_{\text{Dense}}$ · WAS |
+| ✅ Sanity | SimplerEnv replay | TSR · WAS vs OpenVLA |
 
 ---
 
-## 🔧 Table 5 — Execution (100% solo · inference-only · 8 steps)
+## 🔧 Table 6 — Execution (100% solo · inference-only)
 
-| # | 🪜 Step | ⚙️ How | 📤 Output |
-|---|---|---|---|
-| 1 | 🎯 **Lock the wedge** | Write §1 around the one-sentence claim (Table 1) vs WorldArena/VLABench from day 1 | framed §1 |
-| 2 | 🇮🇳 **Build WalkIndia moat** | Dashcam clips → replay eval: model sees frame_t → predicts next action/state → score vs real frame_{t+1}. No robot, no sim, pure inference | un-scoopable eval set |
-| 3 | ♻️ **Reuse, never hand-build** | Pull LIBERO-Mem (Absent), COLOSSEUM (DenseWorld perturb), JRDB (social) as **offline trajectory sets**; score frozen models | 4 domains, no authored tasks |
-| 4 | ⚖️ **One harness, one fair rule** | Every family = same frozen backbone + same tiny linear head (or zero head); **ablate the head** → proves WAS measures representation, not glue | fair protocol + ablation |
-| 5 | 📏 **Pin + stress-test WAS** | Fix $m_{\text{VLA}}$=OpenVLA; **bound WAS** (near-zero baseline can't blow up); report 3 weight settings + bootstrap CIs | robust metric |
-| 6 | 🧮 **Run the cheap matrix** | ~6 frozen models × 4 domains; fill Table 6 + per-model tables + radar. **Headline: scatter open-loop prediction score vs closed-loop success → show they diverge** | results + 1 measured finding |
-| 7 | 🔁 **Ship the flywheel (15-day)** | Public leaderboard + auto-eval script: ingest any new HF checkpoint → frozen inference → update ranks → auto-post | adoption engine |
-| 8 | 📦 **Release everything** | Code + WalkIndia replay (pointer, blurred faces/plates) + eval scripts + leaderboard | citations = **P0** |
+| # | 🪜 Step | 📤 Output |
+|---|---|---|
+| 1 | 🎯 Lock the wedge; write §1 vs World-in-World/WorldArena from day 1 | framed §1 |
+| 2 | 🇮🇳 Curate YouTube India clips → blur faces/plates → derive ego-actions & agent tracks | DenseWorld-India set |
+| 3 | ♻️ Reuse LIBERO-Mem / RoboFail / CALVIN / Social-HM3D as offline sets | 4 non-India domains |
+| 4 | ⚖️ One harness: same frozen backbone + same tiny head (or zero); **ablate head** | fair protocol + ablation |
+| 5 | 📏 WAS: pin $m_{\text{VLA}}$=OpenVLA · bound it · 3 weight settings · bootstrap CIs | robust metric |
+| 6 | 🧮 Frozen 4-family × domain matrix; **scatter generative-score vs real behavior → divergence** | results + 1 measured finding |
+| 7 | 🔁 Leaderboard + auto-eval: ingest any HF checkpoint → frozen inference → rank | adoption engine |
+| 8 | 📦 Release pointer-dataset + blur pipeline + eval scripts + leaderboard | citations = **P0** |
 
 ---
 
-## ⚠️ Table 6 — Risks → fixes
+## ⚠️ Table 7 — Risks → fixes
 
 | ⚠️ Risk | 🛡️ Fix |
 |---|---|
-| Reviewer: "offline replay ≠ true closed-loop" | Frame as action-replay w/ feedback; validate a subset on SimplerEnv closed-loop |
-| WalkIndia privacy (faces / plates) | Blur faces + plates; release pointer + license, not raw video |
-| WalkIndia action labels noisy | Derive ego-action from IMU / optical flow; report label-noise bound |
+| Core thesis scooped by World-in-World (Oral) | Pivot to **real-world social India**; cite WiW as the sim half |
+| Can't truly close the loop on recorded video | (i) validate replay proxy vs a sim closed-loop subset · (ii) YouTube → generative social sim · (iii) small real-robot trial |
+| YouTube licensing / privacy | Pointer-only release · blur faces + plates · CC + fair-use research clips |
+| Ego-action labels noisy | Optical-flow / steering proxy + report label-noise bound |
 | "Head does the work, not the model" | Zero-head vs linear-head **ablation** isolates representation |
-| WAS unstable at near-zero baseline | Bound/clip WAS · pin $m_{\text{VLA}}$=OpenVLA · weight sensitivity |
+| WAS unstable at near-zero baseline | Bound/clip · pin OpenVLA · weight sensitivity |
 | Embodiment mismatch confound | Same frozen backbone + same head for all families |
 
 ---
 
-## 🔗 Table 7 — Key prior-art links
+## 🔗 Table 8 — Key prior-art links
 
 | 🏷️ Topic | 📄 Paper (venue) | 🔗 Link |
 |---|---|---|
+| 🚨 Core thesis scoop | World-in-World (**ICLR'26 Oral**) | https://arxiv.org/abs/2510.18135 |
 | Thesis + metric scoop | WorldArena / EWMScore (arXiv'26) | https://arxiv.org/abs/2602.08971 |
-| Unified closed-loop | World-in-World (arXiv'25) | https://arxiv.org/pdf/2510.18135 |
 | Capability VLA bench | VLABench (ICCV'25) | https://arxiv.org/abs/2412.18194 |
 | WM benchmark | WorldModelBench (CVPR'25) | https://worldmodelbench.github.io/ |
-| WM-as-sim · action-cond WM | UniSim (ICLR'24) · iVideoGPT (NeurIPS'24) | https://iclr.cc/virtual/2024/oral/19722 · https://neurips.cc/virtual/2024/poster/96668 |
-| Stress test | THE COLOSSEUM (RSS'24) | https://roboticsconference.org/2024/program/papers/133/ |
 | WM improves VLA | WMPO (arXiv'25) | https://arxiv.org/html/2511.09515v1 |
+| Social WAM (method) | NavThinker (arXiv'26) | https://arxiv.org/html/2603.15359 |
 | Object permanence | LIBERO-Mem (arXiv'25) | https://arxiv.org/html/2511.11478 |
 | Counterfactual recovery | Dream2Fix · FailSafe | https://arxiv.org/abs/2603.13528 · https://arxiv.org/html/2510.01642v2 |
-| Social WAM | NavThinker (arXiv'26) | https://arxiv.org/pdf/2603.15359 |
+| Egocentric real sim | EgoSim (arXiv'26) | https://arxiv.org/abs/2604.01001 |
 | Survey framing | "Understanding World or Predicting Future?" (ACM CSUR'25) | https://github.com/tsinghua-fib-lab/World-Model |

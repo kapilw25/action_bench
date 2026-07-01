@@ -1,0 +1,64 @@
+# 🧭 ACTION-ATLAS — Research Package
+
+## 🎯 Table 1 — At a glance
+
+| 🧩 Field | 📋 Value |
+|---|---|
+| Title | ACTION-ATLAS: Beyond Action Prediction — What Must World Models Achieve to Surpass VLA Systems? |
+| Question | Which robotic capabilities genuinely need predictive world models, and when does prediction improve *action* (not just fidelity)? |
+| ⭐ Novelty wedge | Does the world-model advantage **survive real-world, socially-dense Indian street driving** (🇮🇳 YouTube clips), and is **forecasting other agents** the mechanism — across all 4 families (VLA/LWM/WAM/WFM)? |
+| Families | I VLA · II LWM (JEPA latent) · III WAM (world-action) · IV WFM (world foundation) |
+| Metric | **WAS** — capability-level, VLA-baselined, bootstrap-significant advantage |
+| Mode | Solo · frozen · inference-only (offline replay + sim closed-loop subset) |
+| Status | 🔴 pre-experiment (repositioning novelty vs World-in-World / WorldArena) |
+| Target venue | NeurIPS D&B · CoRL · RSS |
+
+---
+
+## 🗂️ Table 2 — Directory map
+
+| 📁 Path | 📦 Contents |
+|---|---|
+| `study/proposal/proposal_ACTION_ATLAS.md` | Full proposal (abstract, taxonomy, benchmark, metrics, findings) |
+| `study/proposal/plan1.md` | Execution + novelty plan (India/DenseWorld/YouTube focus) — tables only |
+| `study/proposal/README.md` *(this = study/README.md)* | This guide |
+| `study/literature/p_all_table.md` | All competitor tables combined (6 papers, 21 tables, 25 images) |
+| `study/literature/p{1..6}_table.md` | Per-paper extracted tables + source images |
+| `study/literature/p{1..6}_*.pdf` | Source papers |
+
+---
+
+## 📚 Table 3 — Competitor papers (the crowded space)
+
+| # | Paper | Venue | Relation to ACTION-ATLAS |
+|---|---|---|---|
+| p1 | World-in-World: World Models in a Closed-Loop World | **ICLR'26 Oral** | 🚨 Core-thesis scoop (sim, single-agent) |
+| p2 | WorldArena: Perception + Functional Utility of Embodied WMs | arXiv'26 | Metric scoop (EWMScore); sim |
+| p3 | VLABench: Language-Conditioned Manipulation w/ Long-Horizon Reasoning | ICCV'25 | Capability-centric VLA bench |
+| p4 | WorldModelBench: Judging Video Gen Models as World Models | CVPR'25 | Generative-quality eval |
+| p5 | WorldScore: Unified Evaluation for World Generation | arXiv | Generative-quality eval |
+| p6 | WorldSimBench: Video Gen Models as World Simulators | arXiv | Generative-quality eval |
+
+---
+
+## 🆕 Table 4 — Novelty status (what survives)
+
+| 🚦 | Claim | Verdict |
+|---|---|---|
+| 🔴 | Closed-loop "behavior not fidelity" benchmark | Scooped (World-in-World Oral) |
+| 🔴 | "Prediction ≠ behavior" · WAS · "missing benchmark" | Scooped (WiW / WorldArena / VLABench) |
+| 🟢 | 🇮🇳 Real-world socially-dense Indian driving (YouTube) | **Un-scooped — the moat** |
+| 🟢 | 🚸 Social / multi-agent (ION) capability axis | **Un-scooped** (rivals single-agent) |
+| 🟢 | 🔁 Sim→real transfer of world-model advantage | **Open question** |
+
+---
+
+## ▶️ Table 5 — Next actions
+
+| # | Action | Priority |
+|---|---|---|
+| 1 | Curate + privacy-blur YouTube India driving clips (DenseWorld-India) | 🔴 P0 |
+| 2 | Rewrite §1 + abstract as "ACTION-ATLAS-Social" vs World-in-World | 🔴 P0 |
+| 3 | Build frozen 4-family inference harness + uniform-head ablation | 🟡 P1 |
+| 4 | Run matrix → WAS + generative-vs-behavior divergence scatter | 🟡 P1 |
+| 5 | Leaderboard + pointer-dataset release | 🟢 P2 |
