@@ -1,6 +1,6 @@
-# 🤖 ACTION-ATLAS
+# 🤖 DenseActArena
 
-> Beyond Action Prediction: **what must world models achieve to surpass Vision-Language-Action systems** — and does that advantage survive **real-world, socially-dense Indian street driving**?
+> *Benchmarking World-Action Models in dense, socially-rich real-world scenes.* Beyond action prediction: **what must world models achieve to surpass Vision-Language-Action systems** — and does that advantage survive **real-world, socially-dense Indian street driving**?
 
 ## 🎯 Table 1 — What this is
 
@@ -71,7 +71,7 @@
 | # | Action | Priority |
 |---|---|---|
 | 1 | Curate + privacy-blur YouTube India driving clips (DenseWorld-India) | 🔴 P0 |
-| 2 | Rewrite §1 + abstract as "ACTION-ATLAS-Social" vs World-in-World | 🔴 P0 |
+| 2 | Rewrite §1 + abstract as "DenseActArena" vs World-in-World | 🔴 P0 |
 | 3 | Build frozen 4-family inference harness + uniform-head ablation | 🟡 P1 |
 | 4 | Run matrix → WAS + generative-vs-behavior divergence scatter | 🟡 P1 |
 | 5 | Leaderboard + pointer-dataset release | 🟢 P2 |

@@ -1,4 +1,4 @@
-# 🤖 ACTION-ATLAS — Plan & Novelty (🇮🇳 India · DenseWorld · YouTube driving)
+# 🤖 DenseActArena — Plan & Novelty (🇮🇳 India · DenseWorld · YouTube driving)
 
 ## 🎯 Table 1 — The novelty wedge (lead with this)
 
@@ -7,7 +7,7 @@
 | ⭐ One-sentence claim | "First benchmark testing whether the **world-model advantage survives real-world, socially-dense Indian street driving** (curated from **YouTube dashcam/driving clips**), and whether **forecasting other agents** is the mechanism — across all four prediction families (VLA/LWM/WAM/WFM) with a VLA-baselined advantage score (WAS)." |
 | 🧱 Un-scoopable asset | Dense Indian-street driving video (YouTube): rickshaws, mixed traffic, street vendors, pedestrians, animals, night/rain — **no rival benchmark has this data** |
 | 🕳️ Gap it fills | Every competitor is **simulation-only + single-agent**; none test **real-world + social/multi-agent + sim→real transfer** |
-| 🎯 Positioning | Complementary to World-in-World (the *sim* half) → ACTION-ATLAS is the **real-world social** half |
+| 🎯 Positioning | Complementary to World-in-World (the *sim* half) → DenseActArena is the **real-world social** half |
 
 ---
 
